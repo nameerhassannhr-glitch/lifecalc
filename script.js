@@ -112,7 +112,10 @@ dateCalculateBtn.addEventListener("click", function () {
   );
 
 
- dateResult.textContent = `${days} days`;
+const weeks = Math.floor(days / 7);
+const remainingDays = days % 7;
+dateResult.textContent =
+`${days} days (${weeks} week${weeks !== 1 ? "s" : ""} and ${remainingDays} day${remainingDays !== 1 ? "s" : ""})`;
 });
 
 
