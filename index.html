@@ -13,23 +13,117 @@
             <h1>lifecalc</h1>
             <p class="subtitle">Simple calculations, made easy.</p>
 
+<div id="homePage">
 
-            <section class="calculator">
-                <h2>Age calculator</h2>
+   <h2>What do you want to calculate?</h2>
+
+     <div class="calculator-list"></div>
+
+      <button class="calculator-card" onclick="showCalculator('age')">
+              Age Calculator
+      </button>
 
 
-                <label for=" birthdate"> Date of Birth</label>
+       <button class="calculator-card" onclick="showCalculator('date')">
+             Date Calculator
+       </button>
+           
 
-                <input type="date" id="birthDate" min="1900-01-01" max="2026-12-31">
-                
-                <button id="calculateBtn"> Calculate Age</button>
+         <button class="calculator-card" onclick="showCalculator('bmi')">
+               BMI Calculator
+         </button>
 
-                <div id="result"  Class="result">
-                    Your age will appear here.
-                </div>
+           <button class="calculator-card" onclick="showCalculator('future')">
+                Future Calculator
+           </button>
 
-            </section>
+           </div>
 
+          </div>
+
+           <section id="ageCalculator" class="calculator hidden">
+        <button class="back-button" onclick="goHome()">
+          ← Back
+         </button>
+
+
+          <h2>Age Calculator</h2>
+
+            <label for="birthDate">Date of Birth</label>
+
+            <input
+             type="date"
+             id="birthDate"
+              min="1900-01-01"
+              max="2026-12-31"
+              >
+
+                <button id="calculateBtn">
+                       Calculate Age
+                </button>
+             <div id="result" class="result">
+                 Your age will appear here.
+             </div>
+
+
+           </section>
+
+           <section id="dateCalculator" class="calculator hidden">
+
+              <button class="back-button" onclick="goHome()">
+    ← Back
+  </button>
+
+
+    <h2>Date Calculator</h2>
+
+      <label for="startDate">Start Date</label>
+  <input type="date" id="startDate">
+
+
+   <label for="endDate">End Date</label>
+
+     <input type="date" id="endDate">
+
+      <button id="dateCalculateBtn">
+    Calculate Difference
+  </button>
+
+   <div id="dateResult" class="result">
+     The difference will appear here.
+   </div>
+
+           </section>
+
+           <section id="bmiCalculator" class="calculator hidden">
+
+              <button class="back-button" onclick="goHome()">
+    ← Back
+            </button>
+
+            <h2>BMI Calculator</h2>
+
+
+             <p>Coming soon...</p>
+             <button class="back-button" onclick="goHome()">
+    ← Back
+  </button>
+
+</section>
+
+<section id="futureCalculator" class="calculator hidden">
+   <button class="back-button" onclick="goHome()">
+    ← Back
+  </button>
+
+
+    <h2>Future Calculator</h2>
+
+
+      <p>Coming soon...</p>
+
+
+</section>
         </main>
 
         <script src="script.js"></script>

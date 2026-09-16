@@ -61,3 +61,46 @@ button {
   border-radius: 8px;
   text-align: center;
 }
+
+/* Calculator selection */
+
+.calculator-list {
+   display: grid;
+  gap: 15px;
+    margin-top: 25px;
+}
+
+.calculator-card {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Hide calculators until selected */
+
+.hidden {
+    display: none;
+}
+
+/* Back button */
+
+.back-button {
+    width: auto;
+    padding: 8px 14px;
+      margin-bottom: 15px;
+       background: #e5e7eb;
+         color: #1f2937;
+  font-size: 14px;
+} 
