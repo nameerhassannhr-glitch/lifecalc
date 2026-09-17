@@ -127,9 +127,11 @@ const bmiCalculateBtn = document.getElementById("bmiCalculateBtn");
 const bmiResult = document.getElementById("bmiResult");
 
 bmiCalculateBtn.addEventListener("click", function () {
-    bmiResult.textContent = "Please enter your height and weight.";
-    return;
 
+ if (!heightInput.value || !weightInput.value) {
+      bmiResult.textContent = "Please enter your height and weight.";
+    return;
+ }
 
   const height = Number(heightInput.value);
   const weight = Number(weightInput.value);
