@@ -93,37 +93,87 @@
      The difference will appear here.
    </div>
 
-           </section>
-
-           <section id="bmiCalculator" class="calculator hidden">
-
-              <button class="back-button" onclick="goHome()">
-    ← Back
-            </button>
-
-            <h2>BMI Calculator</h2>
-
-
-             <p>Coming soon...</p>
-             <button class="back-button" onclick="goHome()">
-    ← Back
+     <section id="bmiCalculator" class="calculator hidden">
+        <button class="back-button" onclick="goHome()">
+          ← Back
   </button>
 
-</section>
+
+ <h2>BMI Calculator</h2>
+
+
+ <label for="height">Height (cm)</label>
+
+ <input
+  type="number"
+   id="height"
+ placeholder="Enter height"
+    min="1"
+  >
+
+ <label for="weight">Weight (kg)</label>
+<input
+ type="number"
+   id="weight"
+ placeholder="Enter weight"
+   min="1
+   >
+
+<button id="bmiCalculateBtn">
+  <button id="bmiCalculateBtn">
+  </button>
+
+  </div>
+
+ <p class="subtitle">
+    BMI is a general screening measure and should not be used by itself
+     to judge health, especially for children and teenagers.
+  </p>
+  
+  </section>
+
+     </section>     
 
 <section id="futureCalculator" class="calculator hidden">
+
+
    <button class="back-button" onclick="goHome()">
-    ← Back
-  </button>
+      ← Back
+    </button>
+
+<h2>Tip Calculator</h2>
+
+ <label for="billAmount">Bill Amount (৳)</label>
+
+ <input
+   type="number"
+ id="billAmount"
+   placeholder="Enter bill amount"
+ min="0"
+ >
 
 
-    <h2>Future Calculator</h2>
+  <label for="tipPercent">Tip Percentage (%)</label>
 
 
-      <p>Coming soon...</p>
+ <input
+  type="number"
+  id="tipPercent"
+   placeholder="Enter tip percentage"
+       min="0"
+  >
 
 
-</section>
+    <button id="tipCalculateBtn">
+      Calculate
+    </button>
+
+
+  <div id="tipResult" class="result">
+  Your result will appear here.
+  </div>
+
+  </section>
         </main>
 
         <script src="script.js"></script>

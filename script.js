@@ -119,3 +119,68 @@ dateResult.textContent =
 });
 
 
+// BMI Calculator
+
+const heightInput = document.getElementById("height");
+const weightInput = document.getElementById("weight");
+const bmiCalculateBtn = document.getElementById("bmiCalculateBtn");
+const bmiResult = document.getElementById("bmiResult");
+
+bmiCalculateBtn.addEventListener("click", function () {
+    bmiResult.textContent = "Please enter your height and weight.";
+    return;
+
+
+  const height = Number(heightInput.value);
+  const weight = Number(weightInput.value);
+
+   if (height <= 0 || weight <= 0) {
+ bmiResult.textContent = "Please enter valid values.";
+  return;
+  }
+
+
+  const heightInMeters = height / 100;
+
+    const bmi = weight / (heightInMeters * heightInMeters);
+
+
+      bmiResult.textContent = `BMI: ${bmi.toFixed(1)}`;
+});
+
+
+// Tip Calculator
+
+const billAmountInput = document.getElementById("billAmount");
+const tipPercentInput = document.getElementById("tipPercent");
+const tipCalculateBtn = document.getElementById("tipCalculateBtn");
+const tipResult = document.getElementById("tipResult");
+
+tipCalculateBtn.addEventListener("click", function () {
+
+  if (!billAmountInput.value || !tipPercentInput.value) {
+   tipResult.textContent = "Please enter the bill amount and tip percentage.";
+   return;
+   
+  }
+
+    const billAmount = Number(billAmountInput.value);
+      const tipPercent = Number(tipPercentInput.value);
+
+ if (billAmount < 0 || tipPercent < 0) {
+    tipResult.textContent = "Please enter valid values.";
+      return;
+ }
+
+
+ const tipAmount = billAmount * (tipPercent / 100);
+ const totalAmount = billAmount + tipAmount;
+
+
+ tipResult.textContent =
+  `Tip: ৳${tipAmount.toFixed(2)} | Total: ৳${totalAmount.toFixed(2)}`;
+});
+
+
+
+
