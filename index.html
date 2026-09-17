@@ -36,6 +36,21 @@
            <button class="calculator-card" onclick="showCalculator('future')">
                 Tip Calculator
            </button>
+           <button class="calculator-card" onclick="showCalculator('percentage')">
+            Percentage Calculator
+           </button>
+           
+           <button class="calculator-card" onclick="showCalculator('discount')">
+            Discount Calculator
+            </button>
+
+          <button class="calculator-card" onclick="showCalculator('unit')">
+            Unit Converter
+          </button>
+
+          <button class="calculator-card" onclick="showCalculator('interest')">
+            interest Calculator
+            </button>
 
            </div>
 
@@ -178,6 +193,167 @@
   </div>
 
   </section>
+
+<section id="percentageCalculator" class="calculator hidden">
+
+  <button class="back-button" onclick="goHome()">
+    ← Back
+ </button>
+
+ <h2>Percentage Calculator</h2>
+
+   <label for="percentageValue">Value</label>
+     <input
+    type="number"
+      id="percentageValue"
+  placeholder="Enter value"
+  >
+     <label for="percentagePercent">Percentage (%)</label>
+     <input
+     type="number"
+      id="percentagePercent"
+       placeholder="Enter percentage"
+  >
+  
+    <button id="percentageCalculateBtn">
+      Calculate
+    </button>
+
+  <div id="percentageResult" class="result">
+      Your result will appear here. 
+  </div>
+
+</section>
+
+<section id="discountCalculator" class="calculator hidden">
+
+
+  <button class="back-button" onclick="goHome()">
+    ← Back
+  </button>
+
+<h2>Discount Calculator</h2>
+
+ <label for="originalPrice">Original Price (৳)</label>
+  <input
+  type="number"
+    id="originalPrice"
+     placeholder="Enter original price"
+    min="0"
+    >
+    
+      <label for="discountPercent">Discount (%)</label>
+       <input
+        type="number"
+        id="discountPercent"
+         placeholder="Enter discount percentage"
+           min="0"
+           >
+           
+           
+        <button id="discountCalculateBtn">
+          Calculate
+        </button>
+
+       <div id="discountResult" class="result">
+         Your result will appear here. 
+       </div>  
+
+      
+</section>
+
+<section id="unitCalculator" class="calculator hidden">
+
+ <button class="back-button" onclick="goHome()">
+    ← Back
+ </button>
+
+ <h2>Unit Converter</h2>
+
+   <label for="unitValue">Value</label>
+    <input
+    type="number"
+     id="unitValue"
+     placeholder="Enter value"
+     >
+
+      <label for="unitType">Conversion</label>
+        
+        <select id="unitType">
+        <option value="km-mi">Kilometers → Miles</option>
+          <option value="mi-km">Miles → Kilometers</option>
+         <option value="kg-lb">Kilograms → Pounds</option>
+         <option value="lb-kg">Pounds → Kilograms</option>
+          <option value="m-ft">Meters → Feet</option>
+             <option value="ft-m">Feet → Meters</option>
+          <option value="c-f">Celsius → Fahrenheit</option>
+            <option value="f-c">Fahrenheit → Celsius</option>       
+        </select>
+
+       <button id="unitCalculateBtn">
+        Convert
+       </button>  
+
+  <div id="unitResult" class="result">
+      Your result will appear here.
+  </div>
+
+</section>
+
+<section id="interestCalculator" class="calculator hidden">
+
+
+   <button class="back-button" onclick="goHome()">
+      ← Back
+   </button>
+
+
+    <h2>Interest Calculator</h2>
+
+    <label for="principal">Principal (৳)</label>
+      <input
+        type="number"
+         id="principal"
+         placeholder="Enter principal amount"
+         min="0"
+         >
+
+        <label for="interestRate">Annual Interest Rate (%)</label>
+         <input
+         type="number"
+          id="interestRate"
+          placeholder="Enter interest rate"
+          min="0" 
+          >  
+
+          <label for="interestTime">Time (years)</label>
+           <input
+              type="number"
+             id="interestTime 
+                 placeholder="Enter time"
+                min="0"
+              >            
+             <label for="interestType">Interest Type</label>
+
+             <select id="interestType"></select>
+             <option value="simple">Simple Interest</option>
+            <option value="compound">Compound Interest</option>
+             </select>
+
+
+              <button id="interestCalculateBtn">
+                calculate
+              </button>
+
+
+                <div id="interestResult" class="result">
+               Your result will appear here.
+               </div>
+
+
+              </section>
+
+              
         </main>
 
         <script src="script.js"></script>
