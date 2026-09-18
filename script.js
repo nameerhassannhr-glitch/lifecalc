@@ -41,41 +41,7 @@ calculateBtn.addEventListener("click", function () {
     `You are ${years} years, ${months} months, and ${days} days old.`;
 });
 
-// Calculator navigation
 
-function showCalculator(calculator) {
-document.getElementById("homePage").classList.remove("hidden");
-
-    document.querySelectorAll(".calculator").forEach(function (section) {  section.classList.add("hidden");
-      });
-    
-      if (calculator === "age") { document.getElementById("ageCalculator").classList.remove("hidden");
-        }
-      
-
-         if (calculator === "date") {
-             document.getElementById("dateCalculator").classList.remove("hidden");
-         }
-
-          if (calculator === "bmi") {
-              document.getElementById("bmiCalculator").classList.remove("hidden");
-  }
-
-   if (calculator === "future") {
-       document.getElementById("futureCalculator").classList.remove("hidden");
-   }
-   }
-function goHome() {
-   document.querySelector(".calculator-list").classList.remove("hidden");
-
-
-   // Return to homepage
-
-
-  document.querySelectorAll(".calculator").forEach(function (section) {
-    section.classList.add("hidden");
-  });
-}
 
 
 // Date Calculator
@@ -182,6 +148,250 @@ tipCalculateBtn.addEventListener("click", function () {
  tipResult.textContent =
   `Tip: ৳${tipAmount.toFixed(2)} | Total: ৳${totalAmount.toFixed(2)}`;
 });
+
+// Navigation for all calculators
+
+function showCalculator(calculator) {
+ document.getElementById("homePage").classList.add("hidden");
+ 
+ 
+  document.querySelectorAll(".calculator").forEach(function (section) {
+   section.classList.add("hidden");
+  });
+  
+ if (calculator === "age") {
+   document.getElementById("ageCalculator").classList.remove("hidden");
+  }
+  
+  if (calculator === "date") {
+  document.getElementById("dateCalculator").classList.remove("hidden");
+  }
+  
+   if (calculator === "bmi") {
+   document.getElementById("bmiCalculator").classList.remove("hidden");
+  }
+  
+ if (calculator === "future") {
+ document.getElementById("futureCalculator").classList.remove("hidden");
+  }
+  
+  if (calculator === "percentage") {
+  document.getElementById("percentageCalculator").classList.remove("hidden");
+  }
+  
+    if (calculator === "discount") {
+  document.getElementById("discountCalculator").classList.remove("hidden");
+    }
+    
+ if (calculator === "unit") {
+  document.getElementById("unitCalculator").classList.remove("hidden");
+  }
+  
+  if (calculator === "interest") {
+document.getElementById("interestCalculator").classList.remove("hidden");
+  }
+}
+
+function goHome() {
+    document.getElementById("homePage").classList.remove("hidden");
+
+  document.querySelectorAll(".calculator").forEach(function (section) {
+section.classList.add("hidden");
+  });
+}
+
+
+// Percentage Calculator
+
+const percentageValueInput = document.getElementById("percentageValue");
+const percentagePercentInput = document.getElementById("percentagePercent");
+const percentageCalculateBtn = document.getElementById("percentageCalculateBtn");
+const percentageResult = document.getElementById("percentageResult");
+
+percentageCalculateBtn.addEventListener("click", function () {
+
+  if (!percentageValueInput.value || !percentagePercentInput.value) {
+   percentageResult.textContent = "Please enter both values."; 
+  return;
+  }
+
+  const value = Number(percentageValueInput.value);
+  const percent = Number(percentagePercentInput.value);
+
+   if (value < 0 || percent < 0) {
+  percentageResult.textContent = "Please enter valid values.";
+    return;
+   }
+
+     const result = value * (percent / 100);
+
+ percentageResult.textContent =
+`${percent}% of ${value} = ${result.toFixed(2)}`;
+});
+
+
+// Discount Calculator
+
+const originalPriceInput = document.getElementById("originalPrice");
+const discountPercentInput = document.getElementById("discountPercent");
+const discountCalculateBtn = document.getElementById("discountCalculateBtn");
+const discountResult = document.getElementById("discountResult");
+
+
+discountCalculateBtn.addEventListener("click", function () {
+
+   if (!originalPriceInput.value || !discountPercentInput.value) {
+  discountResult.textContent = "Please enter the price and discount.";
+    return;
+   }
+
+ const originalPrice = Number(originalPriceInput.value);
+     const discountPercent = Number(discountPercentInput.value);
+
+
+  if (originalPrice < 0 || discountPercent < 0 || discountPercent > 100) {
+  discountResult.textContent =
+  "Please enter valid values. Discount must be between 0% and 100%.";
+  return;
+  }
+
+ const discountAmount =
+    originalPrice * (discountPercent / 100);
+
+
+  const finalPrice =
+    originalPrice - discountAmount;
+
+   discountResult.textContent =
+`Discount: ৳${discountAmount.toFixed(2)} | Final Price: ৳${finalPrice.toFixed(2)}`;
+});
+
+
+// Unit Converter
+
+const unitValueInput = document.getElementById("unitValue");
+const unitTypeInput = document.getElementById("unitType");
+const unitCalculateBtn = document.getElementById("unitCalculateBtn");
+const unitResult = document.getElementById("unitResult");
+
+unitCalculateBtn.addEventListener("click", function () {
+
+  if (!unitValueInput.value) {
+  unitResult.textContent = "Please enter a value.";
+     return;
+  }
+
+   const value = Number(unitValueInput.value);
+  const type = unitTypeInput.value;
+  
+ let result;
+   let unit;
+
+ if (type === "km-mi") {
+    result = value * 0.621371;
+      unit = "miles";
+  }
+  
+  if (type === "mi-km") {
+    result = value * 1.60934;
+ unit = "km";
+  }
+  
+  if (type === "kg-lb") {
+ result = value * 2.20462;
+    unit = "lb";
+  }
+
+  if (type === "lb-kg") {
+   result = value * 0.453592;
+  unit = "kg";
+  }
+
+ if (type === "m-ft") {
+   result = value * 3.28084;
+   unit = "feet";
+  }
+  
+  
+  if (type === "ft-m") {
+   result = value * 0.3048;
+ unit = "meters";
+  }
+
+if (type === "c-f") {
+    result = (value * 9 / 5) + 32;
+  unit = "°F";
+  }
+  
+    if (type === "f-c") {
+          result = (value - 32) * 5 / 9;
+unit = "°C";
+  }
+
+    unitResult.textContent =
+    `Result: ${result.toFixed(2)} ${unit}`;
+});
+
+// Interest Calculator
+
+const principalInput = document.getElementById("principal");
+const interestRateInput = document.getElementById("interestRate");
+const interestTimeInput = document.getElementById("interestTime");
+const interestTypeInput = document.getElementById("interestType");
+const interestCalculateBtn = document.getElementById("interestCalculateBtn");
+const interestResult = document.getElementById("interestResult");
+
+interestCalculateBtn.addEventListener("click", function () {
+
+
+ if (
+ !principalInput.value ||
+ !interestRateInput.value ||
+ !interestTimeInput.value
+ ) {
+ interestResult.textContent =
+"Please enter all the required values.";
+  return;
+ }
+
+  const principal = Number(principalInput.value);
+ const rate = Number(interestRateInput.value);
+  const time = Number(interestTimeInput.value);
+
+
+  if (principal < 0 || rate < 0 || time < 0) {
+  interestResult.textContent =
+   "Please enter valid values.";
+    return;
+  }
+  let interest;
+ let total;
+
+ if (interestTypeInput.value === "simple") {
+   
+  interest = principal * (rate / 100) * time;
+    total = principal + interest;
+
+  
+    } else {
+  
+    total =
+        principal * Math.pow(1 + rate / 100, time);
+  
+ interest = total - principal;
+  }
+
+
+  interestResult.textContent =
+    `Interest: ৳${interest.toFixed(2)} | Total: ৳${total.toFixed(2)}`;
+});
+
+
+
+
+
+
+
 
 
 

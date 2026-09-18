@@ -104,3 +104,35 @@ button {
          color: #1f2937;
   font-size: 14px;
 } 
+
+
+
+/* Dropdown styling */
+
+select {
+  width: 100%;
+padding: 12px;
+ margin-bottom: 18px;
+  font-size: 16px;
+}
+
+/* colour change */
+
+body {
+  background: #FFF9F0;
+}
+
+button {
+ background: #FF6B35;
+}
+
+.calculator-card {
+ background: #FFF9F0;
+  border: 1px solid #FFE0D2;
+}
+
+.back-button {
+ background: #FFE0D2;
+   color: #1f2937;
+}  
+  
