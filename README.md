@@ -43,3 +43,27 @@ lifecalc/
 ├── style.css
 ├── script.js
 └── README.md
+└── screenshots/
+    ├── homepage.png
+    ├── calculator.png
+    └── converter.png
+
+
+    ## 📸 Screenshots
+
+    ### 🏠 Homepage
+
+
+    ![LifeCalc Homepage](screenshots/homepage.png)
+
+
+### 🧮 Calculator
+
+![LifeCalc Calculator](screenshots/calculator.png)
+
+
+### 🔄 Unit Converter
+
+
+![LifeCalc Unit Converter](screenshots/converter.png)
+
