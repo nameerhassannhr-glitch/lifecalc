@@ -44,7 +44,7 @@ lifecalc/
 ├── script.js
 └── README.md
 └── screenshots/
-```markdown
+```
     ├── homepage.png
     ├── calculator.png
     └── converter.png
