@@ -54,16 +54,17 @@ lifecalc/
     ### 🏠 Homepage
 
 
-    ![LifeCalc Homepage](screenshots/homepage.png)
+<img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/homepage.png" alt="LifeCalc Homepage">
 
 
 ### 🧮 Calculator
 
-![LifeCalc Calculator](screenshots/calculator.png)
+
+<img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/calculator.png" alt="LifeCalc Calculator">
 
 
 ### 🔄 Unit Converter
 
 
-![LifeCalc Unit Converter](screenshots/converter.png)
+<img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/converter.png" alt="LifeCalc Unit Converter">
 
