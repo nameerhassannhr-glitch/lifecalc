@@ -37,19 +37,6 @@ and also looks yummy
 5. You have already made your life easier
 
 
-## Project Structure
-
-```text
-lifecalc/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-└── screenshots/
-```
-    ├── homepage.png
-    ├── calculator.png
-    └── converter.png
 
 
     ## 📸 Screenshots
@@ -59,15 +46,4 @@ lifecalc/
 
 <img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/homepage.png" alt="LifeCalc Homepage">
 
-
-### 🧮 Calculator
-
-
-<img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/calculator.png" alt="LifeCalc Calculator">
-
-
-### 🔄 Unit Converter
-
-
-<img src="https://raw.githubusercontent.com/nameerhassannhr-glitch/lifecalc/main/screenshots/converter.png" alt="LifeCalc Unit Converter">
 
