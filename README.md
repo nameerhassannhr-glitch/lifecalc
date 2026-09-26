@@ -23,6 +23,20 @@ even how many days its been since u did something or the period of time it took 
 - CSS
 - JavaScript
 
+## Source Code
+
+The complete source code for LifeCalc is available on GitHub:
+
+[View the LifeCalc source code](https://github.com/nameerhassannhr-glitch/lifecalc)
+
+
+## Live Website
+
+You can try LifeCalc here:
+
+[Open LifeCalc](https://nameerhassannhr-glitch.github.io/lifecalc/)
+
+
 ## Desing
 
 I chose cosmic orange, white and warm orage beacuse they give me the vide I want 
